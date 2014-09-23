@@ -1,0 +1,31 @@
+Template.header.helpers({
+	'homePage': function() {
+        if (Session.get('activePage') === 'home') return true;
+		else return false;
+	},
+	'profilePage': function() {
+        if (Session.get('activePage') === 'profile') return true;
+		else return false;
+	},
+	'settingsPage': function() {
+        if (Session.get('activePage') === 'settings') return true;
+		else return false;
+	},
+	'aboutPage': function() {
+        if (Session.get('activePage') === 'about') return true;
+		else return false;
+	},
+    'activeClass': function() {
+        return 'active';
+    },
+    userId: function() {
+        return Meteor.user()._id;
+    }
+});
+Template.header.events({
+    'click .navitem': function(e) {
+        if($('.navbar-toggle').css('display') == 'block' && !$(this).siblings().length){
+            $('.navbar-collapse').collapse('toggle');
+        }
+    }
+});
