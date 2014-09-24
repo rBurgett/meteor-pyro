@@ -3,7 +3,7 @@ if (PyroPages.find().count() === 0) {
         'path' : '/',
         'title' : 'home',
         'pageOrder' : '1',
-        'contents' : 'This is the page contents.'
+        'contents' : 'This is the home page contents.'
     });
     PyroPages.insert({
         'path' : 'about',
@@ -16,5 +16,12 @@ if (PyroPages.find().count() === 0) {
         'title' : 'contact',
         'pageOrder' : '1',
         'contents' : 'This is the contact page contents.'
+    });
+};
+if (Meteor.users.find().count() === 0) {
+    Accounts.createUser({
+        'username' : 'admin',
+        'password' : 'adminpass',
+        'profile' : {'role' : 'administrator'}
     });
 };
