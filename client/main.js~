@@ -1,1 +1,1 @@
-Meteor.subscribe('pyroPages');
+Meteor.subscribe('PyroPages');
