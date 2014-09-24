@@ -1,0 +1,5 @@
+<template name="loading">
+    <div class="container-fluid loadingContainer">
+        <img src="loading_white.gif" class="center-block loadingPic" alt="Loading..." title="Loading...">
+    </div>
+</template>
